@@ -8,7 +8,7 @@ De data slaan we op in een **JSON-bestand**, en we bouwen ook een **login-systee
 
 
 
-![SharpPhone End Game](files/images/SharpPhoneEndGame.png)
+![SharpPhone End Game](SharpPhoneEndGame.png)
 
 ## Wat betekent dit concreet?
 
