@@ -54,8 +54,7 @@ Aan het einde van deze leerlijn heb je niet alleen code geschreven, maar een vol
 ## Week 1 – Intro WinForms & Debuggen
 
 📺 **LessonUp**  
-[https://www.lessonup.com/nl/lesson/KrwRF4D6M3KWRww4M
-https://lessonUp.app/self-paced/72b85af7-4856-483e-b996-822d8032ca86](https://lessonUp.app/self-paced/72b85af7-4856-483e-b996-822d8032ca86)
+https://lessonUp.app/self-paced/72b85af7-4856-483e-b996-822d8032ca86
 
 🎯 **Focus**
 - Introductie SharpPhone casus
@@ -99,7 +98,7 @@ Je start een WinForms project en leert de basis van **debuggen** (breakpoints + 
 ## Week 2 – Designer & Controls
 
 📺 **LessonUp**  
-https://www.lessonup.com/nl/lesson/oDNwpHQ3cMLa8w7Qf
+https://lessonUp.app/self-paced/2b67769a-04b5-4079-85a5-6d2ebf1ba660
 
 🎯 **Focus**
 - Toolbox gebruiken
@@ -151,7 +150,7 @@ Je bouwt het hoofdscherm: label, **ListBox** en buttons.
 ## Week 3 – Events & InitializeComponent
 
 📺 **LessonUp**  
-https://www.lessonup.com/nl/lesson/6AikoPwkncqmZyJAm
+https://lessonUp.app/self-paced/499b21ab-cb00-4f82-b234-304fb38d76b5
 
 🎯 **Focus**
 - Wat is een event
@@ -193,7 +192,7 @@ https://www.lessonup.com/nl/lesson/6AikoPwkncqmZyJAm
 ## Week 4 – SmartPhone Class & Data
 
 📺 **LessonUp**  
-https://www.lessonup.com/nl/lesson/MqiPwbdpK8iDAg8Te
+https://lessonUp.app/self-paced/c468e8ff-ff46-4f1b-a510-f11ccdc1d537
 
 🎯 **Focus**
 - SmartPhone class
@@ -241,7 +240,7 @@ Je maakt een class `SmartPhone` en toont data in de ListBox.
 ## Week 5 – JSON & Persistente Data
 
 📺 **LessonUp**  
-https://www.lessonup.com/nl/lesson/mZgoxFCkSKWZTNsrN
+https://lessonUp.app/self-paced/c7a435e8-ddc3-47eb-ba31-9a29aac115dd
 
 🎯 **Focus**
 - Wat is JSON
@@ -288,7 +287,7 @@ Data wordt geladen uit `data.json` bij opstarten en opgeslagen na wijzigingen.
 ## Week 6 – Toevoegen & Bewerken
 
 📺 **LessonUp**  
-https://www.lessonup.com/nl/lesson/yNjoccC8gbR4SLSmk
+https://lessonUp.app/self-paced/b5466a32-0149-4e37-b7c2-8ce2d3536e1c
 
 🎯 **Focus**
 - FormAddPhone
@@ -339,7 +338,7 @@ Een tweede form waarmee je telefoons kunt toevoegen en aanpassen (PDF).
 ## Week 7 – Voorraad & Delete
 
 📺 **LessonUp**  
-https://www.lessonup.com/nl/lesson/NYxdyHmLdXGCagp55
+https://lessonUp.app/self-paced/5b29fa9f-ff18-41f7-a22f-eae2fa177591
 
 🎯 **Focus**
 - SmartPhone uitbreiden (Stock)
@@ -379,7 +378,7 @@ Je breidt SmartPhone uit met voorraad en je maakt Delete.
 ## Week 8 – Login & Afronding
 
 📺 **LessonUp**  
-https://www.lessonup.com/nl/lesson/RbsoxPjWDqbdvpvg5
+https://lessonUp.app/self-paced/31152400-2c6e-4100-93b8-d5ed1d962d71
 
 🎯 **Focus**
 - Login Form
