@@ -54,8 +54,8 @@ Aan het einde van deze leerlijn heb je niet alleen code geschreven, maar een vol
 ## Week 1 – Intro WinForms & Debuggen
 
 📺 **LessonUp**  
-https://www.lessonup.com/nl/lesson/KrwRF4D6M3KWRww4M
-https://lessonUp.app/self-paced/72b85af7-4856-483e-b996-822d8032ca86
+[https://www.lessonup.com/nl/lesson/KrwRF4D6M3KWRww4M
+https://lessonUp.app/self-paced/72b85af7-4856-483e-b996-822d8032ca86](https://lessonUp.app/self-paced/72b85af7-4856-483e-b996-822d8032ca86)
 
 🎯 **Focus**
 - Introductie SharpPhone casus
