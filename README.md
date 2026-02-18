@@ -38,14 +38,14 @@ Aan het einde van deze leerlijn heb je niet alleen code geschreven, maar een vol
 
 ## 🧭 Navigatie
 
-- 🔹 [Week 1 – Intro WinForms & Debuggen](#week-1--intro-winforms--debuggen)
-- 🔹 [Week 2 – Designer & Controls](#week-2--designer--controls)
-- 🔹 [Week 3 – Events & InitializeComponent](#week-3--events--initializecomponent)
-- 🔹 [Week 4 – SmartPhone Class & Data](#week-4--smartphone-class--data)
-- 🔹 [Week 5 – JSON & Persistente Data](#week-5--json--persistente-data)
-- 🔹 [Week 6 – Toevoegen & Bewerken](#week-6--toevoegen--bewerken)
-- 🔹 [Week 7 – Voorraad & Delete](#week-7--voorraad--delete)
-- 🔹 [Week 8 – Login & Afronding](#week-8--login--afronding)
+🔹 [Week 1 – Intro WinForms & Debuggen](#week-1--intro-winforms--debuggen)  
+🔹 [Week 2 – Designer & Controls](#week-2--designer--controls)  
+🔹 [Week 3 – Events & InitializeComponent](#week-3--events--initializecomponent)  
+🔹 [Week 4 – SmartPhone Class & Data](#week-4--smartphone-class--data)  
+🔹 [Week 5 – JSON & Persistente Data](#week-5--json--persistente-data)  
+🔹 [Week 6 – Toevoegen & Bewerken](#week-6--toevoegen--bewerken)  
+🔹 [Week 7 – Voorraad & Delete](#week-7--voorraad--delete)  
+🔹 [Week 8 – Login & Afronding](#week-8--login--afronding)
 
 ---
 
@@ -72,7 +72,6 @@ https://lessonUp.app/self-paced/72b85af7-4856-483e-b996-822d8032ca86
 > Hieronder vind je het uitgebreide weekbestand dat extra uitleg en opdrachten bevat.
 >
 
-
 ### Wat ga je maken
 Je start een WinForms project en leert de basis van **debuggen** (breakpoints + stap-voor-stap).
 
@@ -81,6 +80,13 @@ Je start een WinForms project en leert de basis van **debuggen** (breakpoints + 
 2. Voeg **1 Button** toe (naam: `btnTest`, tekst: `Test`).
 3. Dubbelklik op de button om een Click-event te maken.
 4. Zet in de event-methode een `MessageBox.Show("Klik!");`.
+
+```csharp
+private void btnTest_Click(object sender, EventArgs e)
+{
+    MessageBox.Show("Klik!");
+}
+```
 
 ### Debug-opdracht
 1. Zet een **breakpoint** op de regel met `MessageBox.Show(...)` (klik links van de regel of druk F9).
@@ -138,6 +144,13 @@ Je bouwt het hoofdscherm: label, **ListBox** en buttons.
 - Zet in elke event-methode tijdelijk een `MessageBox.Show("...");`
 - Zet breakpoints in alle 3 events en test dat je ze raakt.
 
+```csharp
+private void btnAddPhone_Click(object sender, EventArgs e)
+{
+    MessageBox.Show("Add clicked");
+}
+```
+
 ## Hints
 - Gebruik F4 om Properties te openen.
 - Naam (Name) ≠ Text.
@@ -167,7 +180,6 @@ https://lessonUp.app/self-paced/499b21ab-cb00-4f82-b234-304fb38d76b5
 > Hieronder vind je het uitgebreide weekbestand dat extra uitleg en opdrachten bevat.
 >
 
-
 ### Wat ga je leren
 - Wat is een **event** en een **callback**
 - Waarom `InitializeComponent()` verplicht is
@@ -184,6 +196,12 @@ https://lessonUp.app/self-paced/499b21ab-cb00-4f82-b234-304fb38d76b5
 ### Bonus
 - Zet een breakpoint in de constructor van `Form1()` en kijk wanneer hij wordt aangeroepen.
 
+```csharp
+public Form1()
+{
+    InitializeComponent();
+}
+```
 
 🔝 [Terug naar navigatie](#-navigatie)
 
@@ -210,7 +228,7 @@ https://lessonUp.app/self-paced/c468e8ff-ff46-4f1b-a510-f11ccdc1d537
 >
 
 ### Wat ga je maken
-Je maakt een class `SmartPhone` en toont data in de ListBox.
+Je maakt een class `SmartPhone` en toont data in de UI.
 
 ### Opdrachten
 1. Maak een nieuw bestand `SmartPhone.cs`.
@@ -228,10 +246,29 @@ Je maakt een class `SmartPhone` en toont data in de ListBox.
 5. Vul de ListBox:
     - `listPhones.Items.Add($"{phone.Brand} {phone.Model}");`
 
+```csharp
+public class SmartPhone
+{
+    public int Id { get; set; }
+    public string Brand { get; set; } = "";
+    public string Model { get; set; } = "";
+    public int StorageSizeMb { get; set; }
+    public decimal Price { get; set; }
+
+    public SmartPhone(int id, string brand, string model, int storageSizeMb, decimal price)
+    {
+        Id = id;
+        Brand = brand;
+        Model = model;
+        StorageSizeMb = storageSizeMb;
+        Price = price;
+    }
+}
+```
+
 ## Hints
 - `List<T>` zit in `System.Collections.Generic`
 - Decimal in C# schrijf je met `m` achter de waarde (bijv. `128.92m`)
-
 
 🔝 [Terug naar navigatie](#-navigatie)
 
@@ -249,7 +286,7 @@ https://lessonUp.app/self-paced/c7a435e8-ddc3-47eb-ba31-9a29aac115dd
 - JSON als opslaglaag
 
 🧪 **Praktijk**
-- data.json gebruiken
+- `data.json` gebruiken
 - Hardcoded data verwijderen
 - Save na wijzigingen
 
@@ -275,10 +312,16 @@ Data wordt geladen uit `data.json` bij opstarten en opgeslagen na wijzigingen.
     - Vul ListBox met alle phones
 6. Zorg dat app niet crasht als JSON leeg is.
 
+```csharp
+using System.Text.Json;
+
+var json = JsonSerializer.Serialize(data);
+File.WriteAllText("data.json", json);
+```
+
 ## Hints
 - Gebruik `System.Text.Json`
 - Zet JSON file op “Copy to output” (staat al goed in csproj)
-
 
 🔝 [Terug naar navigatie](#-navigatie)
 
@@ -321,15 +364,22 @@ Een tweede form waarmee je telefoons kunt toevoegen en aanpassen (PDF).
     - valideer input
     - parse Size/Price
     - maak/werk SmartPhone bij
-    - DialogResult = OK, Close()
+    - `DialogResult = OK`, `Close()`
 5. In btnCancel:
-    - DialogResult = Cancel, Close()
+    - `DialogResult = Cancel`, `Close()`
 6. In `Form1` btnAddPhone:
     - open `FormAddPhone` met `ShowDialog()`
     - bij OK: voeg toe, Id = next, refresh, Save JSON
 7. In `Form1` btnModify:
     - open `FormAddPhone` met geselecteerde SmartPhone
     - bij OK: overschrijf, refresh, Save JSON
+
+```csharp
+using var form = new FormAddPhone();
+
+if (form.ShowDialog() != DialogResult.OK)
+    return;
+```
 
 🔝 [Terug naar navigatie](#-navigatie)
 
@@ -368,8 +418,9 @@ Je breidt SmartPhone uit met voorraad en je maakt Delete.
     - refresh
     - Save JSON
 
-
-
+```csharp
+phones.Remove(selectedPhone);
+```
 
 🔝 [Terug naar navigatie](#-navigatie)
 
@@ -395,7 +446,6 @@ https://lessonUp.app/self-paced/31152400-2c6e-4100-93b8-d5ed1d962d71
 > Hieronder vind je het uitgebreide weekbestand dat extra uitleg en opdrachten bevat.
 >
 
-
 ### Wat ga je maken
 Login form vóór het hoofdscherm. Users staan in JSON.
 
@@ -411,11 +461,16 @@ Login form vóór het hoofdscherm. Users staan in JSON.
     - check password
     - bij fout: FailedAttempts++, opslaan JSON
     - bij 3 fouten: app sluiten
-    - bij goed: FailedAttempts = 0, opslaan JSON, DialogResult.OK
-4. Pas Program.cs aan:
+    - bij goed: FailedAttempts = 0, opslaan JSON, `DialogResult.OK`
+4. Pas `Program.cs` aan:
     - Eerst login tonen (ShowDialog)
     - Alleen bij OK door naar Form1
 
-
+```csharp
+if (user.Password != password)
+{
+    user.FailedAttempts++;
+}
+```
 
 🔝 [Terug naar navigatie](#-navigatie)
