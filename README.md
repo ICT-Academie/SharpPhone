@@ -34,9 +34,6 @@ Als je dit begrijpt, snap je hoe administratiesystemen, beheertools en interne b
 
 Aan het einde van deze leerlijn heb je niet alleen code geschreven, maar een volledige werkende applicatie gebouwd.
 
-En dat is precies hoe je programmeervaardigheden écht ontwikkelt:  
-door iets tastbaars te maken.
-
 ---
 
 ## 🧭 Navigatie
@@ -58,6 +55,7 @@ door iets tastbaars te maken.
 
 📺 **LessonUp**  
 https://www.lessonup.com/nl/lesson/KrwRF4D6M3KWRww4M
+https://lessonUp.app/self-paced/72b85af7-4856-483e-b996-822d8032ca86
 
 🎯 **Focus**
 - Introductie SharpPhone casus
