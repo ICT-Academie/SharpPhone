@@ -298,7 +298,31 @@ https://lessonUp.app/self-paced/c7a435e8-ddc3-47eb-ba31-9a29aac115dd
 Data wordt geladen uit `data.json` bij opstarten en opgeslagen na wijzigingen.
 
 ### Opdrachten
-1. Bekijk `data.json` in het project (phones + users).
+1. Maak een niewe file `data.json` in het project (phones + users).
+
+```json
+{
+  "phones": [
+    {
+      "id": 0,
+      "brand": "SamSang",
+      "model": "Blackhole E55",
+      "storageSizeMb": 128000,
+      "price": 128.92,
+      "stock": 0
+    }
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "password": "Welkom01!",
+      "failedAttempts": 0,
+      "locked": false
+    }
+  ]
+}
+```
+
 2. Maak een class `SharpPhoneDatabase` met:
     - `List<SmartPhone> Phones`
     - `List<UserAccount> Users`
@@ -322,6 +346,20 @@ File.WriteAllText("data.json", json);
 ## Hints
 - Gebruik `System.Text.Json`
 - Zet JSON file op “Copy to output” (staat al goed in csproj)
+
+Je kunt het json bestand ook buiten je project zetten bijv in de AppData folder
+
+```csharp
+  string appFolder = Path.Combine(
+      Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SharpPhone"
+  );
+
+  Directory.CreateDirectory(appFolder); // zorgt dat map bestaat
+
+  string dataPath = Path.Combine(appFolder, "data.json");
+  //C:\Users\username\AppData\Roaming\SharpPhone\
+  var store = new SharpPhoneFileStorage(dataPath);
+```
 
 🔝 [Terug naar navigatie](#-navigatie)
 
